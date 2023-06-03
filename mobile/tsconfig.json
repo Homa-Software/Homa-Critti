@@ -1,5 +1,10 @@
 {
     "extends": "expo/tsconfig.base",
-    "compilerOptions": {}
+    "compilerOptions": {
+        "paths": {
+            "@/env": ["./src/env"],
+            "@/modules/*": ["./src/modules/*"],
+        }
+    }
 }
   
