@@ -1,16 +1,16 @@
 defmodule CrittiWeb.Router do
   use CrittiWeb, :router
-
+  alias Users.UsersController
   pipeline :api do
     plug :accepts, ["json"]
   end
 
   scope "/api", CrittiWeb do
     pipe_through :api
-    get "/users", UserController, :index
-    put "/users", UserController, :edit
-    post "/users", UserController, :create
-    delete "/users", UserController, :delete
+    get "/users", UsersController, :index
+    put "/users", UsersController, :edit
+    post "/users", UsersController, :create
+    delete "/users", UsersController, :delete
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development

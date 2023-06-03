@@ -1,4 +1,4 @@
-defmodule Critti.Admin.User do
+defmodule CrittiWeb.Users.UsersModel do
   use Ecto.Schema
   import Ecto.Changeset
 

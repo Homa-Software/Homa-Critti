@@ -1,5 +1,5 @@
-defmodule CrittiWeb.UserJSON do
-  alias Critti.Admin.User
+defmodule CrittiWeb.Users.UsersJSON do
+  alias CrittiWeb.Users.UsersModel
 
   @doc """
   Renders a list of users.
@@ -15,7 +15,7 @@ defmodule CrittiWeb.UserJSON do
     %{data: data(user)}
   end
 
-  defp data(%User{} = user) do
+  defp data(%UsersModel{} = user) do
     %{
       id: user.id
     }
