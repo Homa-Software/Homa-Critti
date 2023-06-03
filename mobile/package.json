@@ -8,14 +8,28 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "printWidth": 100
+  },
   "dependencies": {
+    "@types/react": "~18.0.27",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
-    "react-native": "0.71.8"
+    "react-native": "0.71.8",
+    "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint": "^8.42.0",
+    "eslint-plugin-react": "^7.32.2"
   },
   "private": true
 }
