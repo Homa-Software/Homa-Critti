@@ -1,5 +1,5 @@
 import { registerRootComponent } from 'expo';
-import MyNavigator from './modules/Navigator';
+import MyNavigator from './screens/Navigator';
 
 import { env } from '@/modules/config/env';
 
