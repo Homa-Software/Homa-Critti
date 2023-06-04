@@ -1,17 +1,15 @@
-import { Box, Center } from 'native-base';
+import { Flex } from 'native-base';
 import { getGames } from '@/modules/games/MyGames/GamesTiles/GamesTiles.mocks';
 import GameTile from '@/modules/games/MyGames/GamesTiles/GameTile';
 
-export default function MyGames() {
+export default function MyGamesScreen() {
   const games = getGames();
 
   return (
-    <Center>
-      <Box bold position="absolute" color="coolGray.50" top="0">
-        {games.map((game) => (
-          <GameTile gameTileInfo={game} key={game.id} />
-        ))}
-      </Box>
-    </Center>
+    <Flex flexDirection="row" flexWrap={'wrap'} gap="1" justifyContent={'center'}>
+      {games.map((game) => (
+        <GameTile gameTileInfo={game} key={game.id} />
+      ))}
+    </Flex>
   );
 }

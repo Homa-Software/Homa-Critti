@@ -10,6 +10,7 @@ module.exports = function (api) {
           alias: {
             '@/env': './src/env',
             '@/modules': './src/modules',
+            '@/screens': './src/screens'
           },
         },
       ],
