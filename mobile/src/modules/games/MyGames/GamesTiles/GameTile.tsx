@@ -1,6 +1,6 @@
 import { Box, VStack, Image, Text, HStack } from 'native-base';
-import type { GameTileInfo } from '../MyGames.types';
 import { useNavigation } from '@react-navigation/native';
+import type { GameTileInfo } from '../MyGames.types';
 import type { NavigationProp } from '@react-navigation/native';
 import type { NativeStackParamList } from '@/screens/Navigator';
 

@@ -1,6 +1,10 @@
 import { Text } from 'native-base';
-import type { GameScreenProps } from '@/modules/games/Game/Game.types';
+import { type RouteProp, useRoute } from '@react-navigation/native';
+import type { NativeStackParamList } from './Navigator';
 
-export default function GameScreen({ game_id }: GameScreenProps) {
-  return <Text>{`Game Screen for game of ID: ${game_id}`}</Text>;
+export type GameRouteProp = RouteProp<NativeStackParamList, 'Game'>;
+
+export default function GameScreen() {
+  const route = useRoute<GameRouteProp>();
+  return <Text>{`Game Screen for game of ID: ${route.params.game_id}`}</Text>;
 }

@@ -1,11 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
-import type { NavigatorScreenParams } from '@react-navigation/native';
+import { NavigationContainer, type NavigatorScreenParams } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NativeBaseProvider } from 'native-base';
 import MyGamesScreen from './MyGames';
 import GameScreen from './Game';
-import type { GameScreenProps } from '@/modules/games/Game/Game.types';
 
 export type DrawerParamList = {
   'My Games': undefined;
@@ -23,7 +21,7 @@ function DrawerNavigator() {
 
 export type NativeStackParamList = {
   Drawer: NavigatorScreenParams<DrawerParamList>;
-  Game: GameScreenProps;
+  Game: { game_id: number };
 };
 
 const NativeStack = createNativeStackNavigator<NativeStackParamList>();
